@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.v("Main", "OnCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -40,6 +41,24 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        Log.v("Main", "OnResume");
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart() {
+        Log.v("Main", "OnStart");
+        super.onStart();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.v("Main", "OnDestroy");
+        super.onDestroy();
     }
 
     @Override
@@ -85,4 +104,18 @@ public class MainActivity extends AppCompatActivity {
             Log.v("MainActivity", "Erorr is starting GEO LOC");
         }
     }
+
+    @Override
+    protected void onPause() {
+        Log.v("Main", "OnPause");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.v("Main", "OnStop");
+        super.onStop();
+    }
+
+
 }
